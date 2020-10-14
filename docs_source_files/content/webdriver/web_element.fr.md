@@ -733,14 +733,7 @@ driver.get("https://www.example.com")
 res = driver.find_element(By.CSS_SELECTOR, "h1").rect
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Navigate to Url
-driver.Navigate().GoToUrl("https://example.com");
-
-var res = driver.FindElement(By.CssSelector("h1"));
-// Return x and y coordinates referenced element
-System.Console.WriteLine(res.Location);
-// Returns height, width
-System.Console.WriteLine(res.Size);
+ // Please raise a PR for code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Navigate to url
@@ -765,98 +758,5 @@ val res = driver.findElement(By.cssSelector("h1")).rect
 
 // Rectangle class provides getX,getY, getWidth, getHeight methods
 println(res.getX())
-  {{< / code-panel >}}
-{{< / code-tab >}}
-
-## Get Element CSS Value
-
-Retrieves the value of specified computed style property 
-of an element in the current browsing context.
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-
-// Navigate to Url
-driver.get("https://www.example.com");
-
-// Retrieves the computed style property 'color' of linktext
-String cssValue = driver.findElement(By.linkText("More information...")).getCssValue("color");
-
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-
-# Navigate to Url
-driver.get('https://www.example.com')
-
-# Retrieves the computed style property 'color' of linktext
-cssValue = driver.findElement(By.LINK_TEXT, "More information...").value_of_css_property('color')
-
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-
-// Navigate to Url
-driver.Navigate().GoToUrl("https://www.example.com");
-
-// Retrieves the computed style property 'color' of linktext
-String cssValue = driver.FindElement(By.LinkText("More information...")).GetCssValue("color");
-
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-
-# Navigate to Url
-driver.get 'https://www.example.com'
-
-# Retrieves the computed style property 'color' of linktext
-cssValue = driver.find_element(:link_text, 'More information...').css_value('color')
-
-  {{< / code-panel >}}
-    {{< code-panel language="javascript" >}}
-// Navigate to Url
-await driver.get('https://www.example.com');
-    
-// Retrieves the computed style property 'color' of linktext
-let cssValue = await driver.findElement(By.linkText("More information...")).getCssValue('color');
-    {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-
-// Navigate to Url
-driver.get("https://www.example.com")
-
-// Retrieves the computed style property 'color' of linktext
-val cssValue = driver.findElement(By.linkText("More information...")).getCssValue("color")
-
-  {{< / code-panel >}}
-{{< / code-tab >}}
-
-## Get Element Text
-
-Retrieves the rendered text of the specified element.
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-// Please provide a pr for code sample
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# Navigate to url
-driver.get("https://www.example.com")
-
-# Retrieves the text of the element
-text = driver.find_element(By.CSS_SELECTOR, "h1").text
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-// Please provide a pr for code sample
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# Please provide a pr for code sample
-  {{< / code-panel >}}
-    {{< code-panel language="javascript" >}}
-// Navigate to URL
-await driver.get('http://www.example.com');
-
-// retrieves the text of the element
-let text = await driver.findElement(By.css('h1')).getText();
-    {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// Please provide a pr for code sample
   {{< / code-panel >}}
 {{< / code-tab >}}
